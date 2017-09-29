@@ -23,7 +23,8 @@
         <dom-bind>
           <template>
             <vaadin-password-field value="{{password}}" placeholder="Password" autofocus></vaadin-password-field>
-            <password-strength password="[[password]]" show-suggestion></password-strength>
+            <password-strength password="[[password]]" show-suggestion score="{{score}}"></password-strength>
+            Score: [[score]]
           </template>
         </dom-bind>
       </template>
