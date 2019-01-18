@@ -14,8 +14,6 @@
 <custom-element-demo>
   <template>
     <link rel="import" href="password-strength.html">
-    <link rel="import" href="../vaadin-themes/valo/vaadin-text-field.html">
-    <link rel="import" href="../vaadin-text-field/vaadin-password-field.html">
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
@@ -39,13 +37,11 @@
 # Installation
 
 ```bash
-bower install --save polymer-password-strength
+npm install --save polymer-password-strength
 ```
 
 # Usage
 
 ```html
-<link rel="import" href="bower_components/polymer-password-strength/password-strength.html">
-
 <password-strength password="[[ password ]]"></password-strength>
 ```
