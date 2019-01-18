@@ -5,10 +5,10 @@
     "no-weakness",
     "polymer"
   ],
-  "repository": "collaborne/polymer-password-strength",
+  "repository": "limonte-polymer-password-strength",
   "homepage": "https://github.com/limonte/polymer-password-strength",
-  "name": "polymer-password-strength",
-  "version": "1.0.0",
+  "name": "collaborne-polymer-password-strength",
+  "version": "2.0.1",
   "main": "password-strength.js",
   "author": "Limon Monte <limon.monte@gmail.com> (https://limonte.github.io)",
   "dependencies": {
