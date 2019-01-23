@@ -1,5 +1,8 @@
 node_modules/
 
+# Result of `polymer analyze`, needed for index.html. Must be generated when needed.
+analysis.json
+
 npm-shrinkwrap.json
 package-lock.json
 yarn.lock
