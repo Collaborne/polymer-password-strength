@@ -18,7 +18,7 @@
   "devDependencies": {
     "@polymer/iron-component-page": "^4.0.0",
     "@polymer/iron-demo-helpers": "^3.0.0",
-    "@webcomponents/webcomponentsjs": "^2.2.4"
+    "polymer-cli": "^1.9.5"
   },
   "bugs": "https://github.com/limonte/polymer-password-strength/issues",
   "license": "MIT",
