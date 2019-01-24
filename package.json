@@ -7,7 +7,7 @@
   ],
   "homepage": "https://github.com/limonte/polymer-password-strength",
   "name": "collaborne-polymer-password-strength",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "password-strength.js",
   "author": "Limon Monte <limon.monte@gmail.com> (https://limonte.github.io)",
   "dependencies": {
