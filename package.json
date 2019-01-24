@@ -5,7 +5,6 @@
     "no-weakness",
     "polymer"
   ],
-  "repository": "limonte-polymer-password-strength",
   "homepage": "https://github.com/limonte/polymer-password-strength",
   "name": "collaborne-polymer-password-strength",
   "version": "2.0.2",
@@ -18,14 +17,16 @@
   "devDependencies": {
     "@polymer/iron-component-page": "^4.0.0",
     "@polymer/iron-demo-helpers": "^3.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.12.1",
+    "eslint-config-collaborne": "^1.5.0",
+    "mocha": "^5.2.0",
     "polymer-cli": "^1.9.5"
   },
-  "bugs": "https://github.com/limonte/polymer-password-strength/issues",
+  "bugs": "https://github.com/Collaborne/polymer-password-strength/issues",
   "license": "MIT",
-  "resolutions": {
-    "inherits": "2.0.3",
-    "samsam": "1.1.3",
-    "supports-color": "3.1.2",
-    "type-detect": "1.0.0"
+  "scripts": {
+    "lint": "eslint . && polymer lint",
+    "test": "npm run lint && echo 'No tests yet'"
   }
 }

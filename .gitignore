@@ -1,7 +1,8 @@
-node_modules/
+/node_modules/
 
-# Result of `polymer analyze`, needed for index.html. Must be generated when needed.
-analysis.json
+*.orig
+*.rej
+*.porig
 
 npm-shrinkwrap.json
 package-lock.json

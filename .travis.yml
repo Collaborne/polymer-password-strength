@@ -1,13 +1,19 @@
 dist: trusty
+group: beta
 language: node_js
-node_js: 8.1
-
-addons:
-  firefox: latest
-  google-chrome: latest
-
-install:
-  - npm install
-
-script:
-  - polymer lint
+node_js:
+- node
+cache:
+  directories:
+  - node_modules
+before_install:
+- if [ -d node_modules ] && [ x$(cat node_modules/.last-node-version 2>/dev/null) != x$(node -e 'console.log(process.version)') ]; then npm rebuild --update-binary && node -e 'console.log(process.version)' > node_modules/.last-node-version; fi
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: npm@collaborne.com
+  api_key:
+    secure: "vOxDor4QYqIxUFmjkZwi70LWA5X/mf+d5CF+wl604Gw92uh+fgW3wKwIyuJfy8bhQj496ZVnaz8C9VzATCWFufrYpkcnzTj69cUCJDFpgCHPTGBP3jgR0kINxZr4yMT/Kop5qDLhNQf03ezh9Kn7igoT+JjUMcRxWvQ6B8wMhLEgVrgSNX10qmwDQx3sJobrRnPD95pUss3jffnoyLG57qdHSqGkKEigre84qSweAB3xtDzf62e7ViXNhkE0K+8nEWBNkHyWiFLFMfTqrn5fR3fsE9rs8WcrpHBO1cfOH7mAoUQyoB2oTlJSuP1NFZzYvTW4oWaReC/Yn0Xvbkb/g0EliH2oR8XdZlWYdRfliUkAH9hInpjk6etoHl+qTSc2Zt2pDkNj/+R1IcX90YEtitR53pOCcxlzfmHHqzqkS3s29CnVvUhhEfMbyri2npzwGkFbdmbyg9M9uR9Kls6VNKfrAP6Lq/IIUsfJMOM3FgwKLq6flgG/jVLWCp9N7yeUj9OQR/Kh6qnyyNyagTtK9QHUMWsrQY12DdXbR7Gz9z4Tep5pfb8LbQ/ciyhTut+4vDbkTh2DziOr80t3+4BmvWMZ9esZZJWD6gqU/OWhJ0C1KIxZQqJWt9b+ty3tzWWSbErQZ2r+6IXQxq+5Z6JyCFlDpJ3Qsci7u1J7V9Tgzhk="
+  on:
+    tags: true
+    condition: $(node -e 'console.log("v" + require("./package.json").version)') = ${TRAVIS_TAG}
