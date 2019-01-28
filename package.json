@@ -1,15 +1,24 @@
 {
+  "name": "@collaborne/polymer-password-strength",
+  "version": "2.0.3",
   "description": "A Polymer password strength indicator, powered by zxcvbn",
+  "homepage": "https://github.com/Collaborne/polymer-password-strength",
+  "license": "MIT",
   "keywords": [
     "password-strength",
     "no-weakness",
     "polymer"
   ],
-  "homepage": "https://github.com/limonte/polymer-password-strength",
-  "name": "collaborne-polymer-password-strength",
-  "version": "2.0.3",
+  "scripts": {
+    "lint": "eslint . && polymer lint",
+    "test": "npm run lint && echo 'No tests yet'"
+  },
   "main": "password-strength.js",
   "author": "Limon Monte <limon.monte@gmail.com> (https://limonte.github.io)",
+  "contributors": [
+    "Collaborne B.V. <opensource@collaborne.com>"
+  ],
+  "bugs": "https://github.com/Collaborne/polymer-password-strength/issues",
   "dependencies": {
     "@polymer/polymer": "^3.0.0",
     "zxcvbn": "^4.0.0"
@@ -22,11 +31,5 @@
     "eslint-config-collaborne": "^1.5.0",
     "mocha": "^5.2.0",
     "polymer-cli": "^1.9.5"
-  },
-  "bugs": "https://github.com/Collaborne/polymer-password-strength/issues",
-  "license": "MIT",
-  "scripts": {
-    "lint": "eslint . && polymer lint",
-    "test": "npm run lint && echo 'No tests yet'"
   }
 }
