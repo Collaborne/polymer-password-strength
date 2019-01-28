@@ -1,7 +1,7 @@
-# `<password-strength>`
+# `<password-strength>` [![Build Status](https://travis-ci.org/Collaborne/polymer-password-strength.svg?branch=master)](https://travis-ci.org/Collaborne/polymer-password-strength)
+
 ## A Polymer password strength indicator, powered by [zxcvbn](https://github.com/dropbox/zxcvbn)
 
-[![Build Status](https://travis-ci.org/Collaborne/polymer-password-strength.svg?branch=master)](https://travis-ci.org/Collaborne/polymer-password-strength)
 
 This element was originally developed by Limon Monte.
 
