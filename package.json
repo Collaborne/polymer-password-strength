@@ -1,6 +1,6 @@
 {
   "name": "@collaborne/polymer-password-strength",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "A Polymer password strength indicator, powered by zxcvbn",
   "homepage": "https://github.com/Collaborne/polymer-password-strength",
   "license": "MIT",
