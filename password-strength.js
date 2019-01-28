@@ -1,4 +1,6 @@
 import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
+// XXX: This pollutes the window object
+import 'zxcvbn/dist/zxcvbn';
 
 /**
  * `<password-strength>` - a password strength indicator, powered by zxcvbn
@@ -74,7 +76,7 @@ export class PasswordStrength extends PolymerElement {
 	}
 
 	_passwordChanged(password) {
-		this.zxcvbn = window.zxcvbn(password);
+		this.zxcvbn = zxcvbn(password);
 		if (!password) {
 			this.score = 0;
 		} else {
