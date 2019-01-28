@@ -76,7 +76,7 @@ export class PasswordStrength extends PolymerElement {
 	}
 
 	_passwordChanged(password) {
-		this.zxcvbn = zxcvbn(password);
+		this.zxcvbn = zxcvbn(password); // eslint-disable-line no-undef
 		if (!password) {
 			this.score = 0;
 		} else {
