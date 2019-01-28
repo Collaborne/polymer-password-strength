@@ -22,7 +22,7 @@ This element was originally developed by Limon Monte.
 # Installation
 
 ```bash
-npm install --save polymer-password-strength
+npm install --save @collaborne/polymer-password-strength
 ```
 
 # Usage
