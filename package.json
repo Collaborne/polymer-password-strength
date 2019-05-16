@@ -1,7 +1,7 @@
 {
   "name": "@collaborne/polymer-password-strength",
   "version": "3.0.0",
-  "description": "A Polymer password strength indicator, powered by zxcvbn",
+  "description": "A LitElement password strength indicator",
   "homepage": "https://github.com/Collaborne/polymer-password-strength",
   "license": "MIT",
   "keywords": [
@@ -10,26 +10,34 @@
     "polymer"
   ],
   "scripts": {
-    "lint": "eslint . && polymer lint",
-    "test": "npm run lint && echo 'No tests yet'"
+    "build": "node_modules/typescript/bin/tsc",
+    "lint": "tslint -c tslint.json \"src/**/*.ts\"",
+    "test": "npm run lint && echo 'No tests yet'",
+    "prepublish": "npm run lint && npm run build",
+    "start-dev": "node_modules/typescript/bin/tsc --watch & polymer serve"
   },
-  "main": "password-strength.js",
+  "main": "dist/password-strength.js",
+  "types": "dist/password-strength.d.ts",
+  "files": [
+    "dist"
+  ],
   "author": "Limon Monte <limon.monte@gmail.com> (https://limonte.github.io)",
   "contributors": [
     "Collaborne B.V. <opensource@collaborne.com>"
   ],
   "bugs": "https://github.com/Collaborne/polymer-password-strength/issues",
   "dependencies": {
-    "@polymer/polymer": "^3.0.0",
-    "zxcvbn": "^4.0.0"
+    "@polymer/polymer": "3.1.0",
+    "lit-element": "^2.1.0"
   },
   "devDependencies": {
     "@polymer/iron-component-page": "^4.0.0",
     "@polymer/iron-demo-helpers": "^3.0.0",
-    "chai": "^4.2.0",
-    "eslint": "^5.12.1",
-    "eslint-config-collaborne": "^1.5.0",
-    "mocha": "^5.2.0",
-    "polymer-cli": "^1.9.5"
+    "polymer-cli": "^1.9.5",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.14.0",
+    "tslint-config-collaborne": "^0.0.4",
+    "typescript": "^3.3.4000",
+    "zxcvbn": "^4.0.0"
   }
 }

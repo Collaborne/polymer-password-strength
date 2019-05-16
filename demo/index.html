@@ -2,31 +2,36 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-  <title>password-strength demo</title>
+	<title>password-strength demo</title>
 
-  <script type="module">
-    import '@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
-    import '@polymer/iron-demo-helpers/demo-snippet.js';
-    import '../password-strength.js';
-  </script>
+	<script type="module">
+		import '@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
+		import '@polymer/iron-demo-helpers/demo-snippet.js';
+		import 'zxcvbn/dist/zxcvbn';
+		import '../dist/password-strength.js';
+	</script>
 </head>
 
 <body>
-  <div class="vertical-section-container centered">
-    <demo-snippet>
-      <template>
-        <dom-bind>
-          <template>
-            <input value="{{password::input}}" placeholder="Password" autofocus></input>
-            <password-strength password="[[password]]" show-suggestion></password-strength>
-          </template>
-        </dom-bind>
-      </template>
-    </demo-snippet>
-  </div>
-</body>
+	<div class="vertical-section-container centered">
+		<demo-snippet>
+			<template>
+				<dom-bind>
+					<template>
+						<input value="{{password::input}}" placeholder="Password" autofocus></input>
+						<password-strength score="[[calcScore(password)]]"></password-strength>
+					</template>
 
+					<script>
+						const scope = document.querySelector('dom-bind');
+						scope.calcScore = password => password.length > 0 ? zxcvbn(password).score + 1 : 0;
+					</script>
+				</dom-bind>
+			</template>
+		</demo-snippet>
+	</div>
+</body>
 </html>
